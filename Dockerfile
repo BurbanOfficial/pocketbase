@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Télécharge la dernière version de PocketBase pour Linux 64 bits depuis GitHub (vérifier la dernière version stable)
 RUN wget -q --show-progress --https-only --timestamping \
-  https://github.com/pocketbase/pocketbase/releases/download/v0.7.0/pocketbase-linux-amd64-v0.7.0.zip
+  RUN wget https://github.com/pocketbase/pocketbase/releases/latest/download/pocketbase-linux-amd64.zip
 
 # Décompresse et nettoie l'archive
 RUN unzip pocketbase-linux-amd64-v0.7.0.zip \
