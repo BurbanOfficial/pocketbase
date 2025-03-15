@@ -7,8 +7,8 @@ RUN apk add --no-cache ca-certificates wget unzip
 # Crée un dossier pour l'application
 WORKDIR /app
 
-# Télécharge la dernière version stable de PocketBase
-RUN wget -O pocketbase.zip https://github.com/pocketbase/pocketbase/releases/latest/download/pocketbase_linux_amd64.zip \
+# Télécharge la version spécifique de PocketBase (par exemple v0.12.0)
+RUN wget -O pocketbase.zip https://github.com/pocketbase/pocketbase/releases/download/v0.12.0/pocketbase_linux_amd64.zip \
     && unzip pocketbase.zip \
     && rm pocketbase.zip \
     && chmod +x pocketbase
